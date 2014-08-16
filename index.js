@@ -11,9 +11,9 @@ var cookie = {
 		return [ 
 				
 				obj.name+'='+encodeURIComponent(obj.value),
-				( typeof obj.expires != 'undefined' ? printExpires(obj.expires) : '' ),
-				( typeof obj.path != 'undefined' ? 'Path='+obj.path : 'Path=/' ),
-				( typeof obj.domain != 'undefined' ? 'Domain='+obj.domain : '' ),
+				( typeof obj.expires != 'undefined' && obj.expires ? printExpires(obj.expires) : '' ),
+				( typeof obj.path != 'undefined' && obj.path ? 'Path='+obj.path : 'Path=/' ),
+				( typeof obj.domain != 'undefined' && obj.domain ? 'Domain='+obj.domain : '' ),
 				( typeof obj.secure != 'undefined' && obj.secure ? 'secure' : '' ),
 				( typeof obj.httponly != 'undefined' && obj.httponly ? 'HttpOnly' : '' )
 
