@@ -40,7 +40,7 @@ What is `cookieObject`:
 ##methods
 ```javascript
 var cookieString = cookie.stringify( cookieObject );
-# cookieName=cookie%20value; Expires: dateString; Max-Date: Number; Path=/; domain=domain.com; secure
+# cookieName=cookie%20value; Expires: Sat, 15-Aug-2015 17:41:05 GMT; Max-Age: 31449600; Path=/; domain=domain.com; secure
 
 
 cookie.parse( cookieString  [, defaultPath]  [, defaultDomain]  );
