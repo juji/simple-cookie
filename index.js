@@ -20,16 +20,21 @@ var cookie = {
 			   ].join(';').replace(/;+/g,';').replace(/;$/,'').replace(/;/g,'; ');
 	},
 	parse: function( string, path, domain ){
-		var s = string.replace(/;\s+/,';').split(';').map(function(s){return s.split('=');});
+		var s = string.replace(/;\s+/g,';').split(';')
+		.map(function(s){return s.replace(/\s+\=\s+/g,'=').split('=');});
 		
 		var n = s.shift();
 
 		var obj = {};
 		obj.expires = false;
+		obj.httponly = false;
+		obj.secure = false;
+		obj.path = path || '/';
+		obj.domain = domain || '';
 
 		var I, f = {
-				'httponly': function(v){ obj.httponly = true },
-				'secure': function(v){ obj.secure = true },
+				'httponly': function(){ obj.httponly = true },
+				'secure': function(){ obj.secure = true },
 				'expires': function(v){ obj.expires = new Date(v) },
 				'max-age': function(v){ if(obj.expires) return; obj.expires = new Date((new Date()).valueOf()+(v*1000)) },
 				'path': function(v){ obj.path = v },
@@ -38,14 +43,10 @@ var cookie = {
 
 		for(var i in s) {
 			I = s[i][0].toLowerCase();
-			if( typeof f[I] != 'undefined' ) f[I]( s[i][1] );
+			if( typeof f[I] != 'undefined' ) f[I]( s[i].length==2 ? s[i][1] : '' );
 		}
 
-		if( typeof obj.httponly == 'undefined' ) obj.httponly = false;
-		if( typeof obj.secure == 'undefined' ) obj.secure = false;
-		if( typeof obj.path == 'undefined' ) obj.path = path || '/';
-		if( typeof obj.domain == 'undefined' ) obj.domain = domain || '';
-		if( typeof obj.expires == 'undefined' || !obj.expires ) obj.expires = 0;
+		if( !obj.expires ) obj.expires = 0;
 		obj.name = n[0];
 		obj.value = decodeURIComponent(n[1]);
 		return obj;
