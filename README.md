@@ -1,5 +1,3 @@
-#RESERVED
-
 #simple-cookie
 simple cookie serializer & parser for node.js
 
@@ -27,7 +25,7 @@ What is `cookieObject`:
 
 **value** `String` : cookie value
 
-**expires** `DateString | Number | Date` (optional) : expire date
+**expires** `DateString | Number | Date` (optional) : expire date (default type is Date)
 
 **path** `DateString | Number | Date` (optional) : cookie path, defaults to `/`
 
@@ -40,19 +38,19 @@ What is `cookieObject`:
 ##methods
 ```javascript
 var cookieString = cookie.stringify( cookieObject );
-# cookieName=cookie%20value; Expires: Sat, 15-Aug-2015 17:41:05 GMT; Max-Age: 31449600; Path=/; domain=domain.com; secure
+// cookieName=cookie%20value; Expires: Sat, 15-Aug-2015 17:41:05 GMT; Max-Age: 31449600; Path=/; domain=domain.com; secure
 
 
 cookie.parse( cookieString  [, defaultPath]  [, defaultDomain]  );
-# will create object like the 'cookieObject'
+// will create object like the 'cookieObject'
 
 
 cookie.tokenize([
-	{name:'cookie1','cvalue1'},
-	{name:'cookie2','cvalue2'},
-	{name:'cookie3','cvalue3'}
+	{name:'cookie1', value: 'cvalue1'},
+	{name:'cookie2', value: 'cvalue2'},
+	{name:'cookie3', value: 'cvalue3'}
 ]);
-# cookie1=cvalue1; cookie2=cvalue2; cookie3=cvalue3 
+// cookie1=cvalue1; cookie2=cvalue2; cookie3=cvalue3 
 ```
 
 
