@@ -27,7 +27,7 @@ What is `cookieObject`:
 
 **expires** `DateString | Number | Date` (optional) : expire date (default type is Date)
 
-**path** `DateString | Number | Date` (optional) : cookie path, defaults to `/`
+**path** `String` (optional) : cookie path, defaults to `/`
 
 **domain** `String` (optional) : cookie domain 
 
