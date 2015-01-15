@@ -1,6 +1,8 @@
 #simple-cookie
 simple cookie serializer & parser for node.js
 
+[![NPM Version][npm-image]][npm-url]
+
 ##install
 npm install simple-cookie
 
@@ -57,3 +59,5 @@ cookie.tokenize([
 chhers,
 
 [jujiyangasli.com](http://jujiyangasli.com)
+[npm-image]: https://img.shields.io/npm/v/simple-cookie.svg?style=flat
+[npm-url]: https://npmjs.org/package/simple-cookie
