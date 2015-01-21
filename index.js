@@ -33,13 +33,13 @@ var cookie = {
 		obj.domain = domain || '';
 
 		var I, f = {
-				'httponly': function(){ obj.httponly = true },
-				'secure': function(){ obj.secure = true },
-				'expires': function(v){ obj.expires = new Date(v) },
-				'max-age': function(v){ if(obj.expires) return; obj.expires = new Date((new Date()).valueOf()+(v*1000)) },
-				'path': function(v){ obj.path = v },
-				'domain': function(v){ obj.domain = v }
-			}
+				'httponly': function(){ obj.httponly = true; },
+				'secure': function(){ obj.secure = true; },
+				'expires': function(v){ obj.expires = new Date(v); },
+				'max-age': function(v){ if(obj.expires) return; obj.expires = new Date((new Date()).valueOf()+(v*1000)); },
+				'path': function(v){ obj.path = v; },
+				'domain': function(v){ obj.domain = v; }
+			};
 
 		for(var i in s) {
 			I = s[i][0].toLowerCase();
@@ -52,8 +52,8 @@ var cookie = {
 		return obj;
 	},
 	tokenize: function( array ){
-		return array.map(function(s){ return s.name+'='+encodeURIComponent(s.value) }).join('; ');
+		return array.map(function(s){ return s.name+'='+encodeURIComponent(s.value); }).join('; ');
 	}
-}
+};
 
 module.exports = exports = cookie;
