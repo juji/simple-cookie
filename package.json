@@ -1,6 +1,6 @@
 {
   "name": "simple-cookie",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple cookie parser & serializer",
   "main": "index.js",
   "scripts": {
