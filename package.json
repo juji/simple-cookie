@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "lint": "jshint *.json *.js"
+    "lint": "jshint *.json *.js",
+    "test-cov": "mocha --require blanket -R html-cov > test/coverage.html"
   },
   "repository": {
     "type": "git",
@@ -21,10 +22,17 @@
     "url": "https://github.com/juji/simple-cookie/issues"
   },
   "homepage": "https://github.com/juji/simple-cookie",
+  "config": {
+      "blanket": {
+        "pattern": "index.js",
+        "data-cover-never" : "node_modules"
+      }
+    },
   "devDependencies": {
     "chai": "^1.9.1",
     "chai-as-promised": "^4.1.1",
     "mocha": "^1.21.4",
-    "jshint": "^2.5.11"
+    "jshint": "^2.5.11",
+    "blanket": "^1.1.6"
   }
 }
