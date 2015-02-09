@@ -8,9 +8,15 @@ function printExpires(expires){
 
 var cookie = {
 	stringify: function( obj ){
+		var value;
+		try{
+			value = encodeURIComponent(obj.value);
+		}catch(e){
+			value = obj.value;
+		}
 		return [ 
 				
-				obj.name+'='+encodeURIComponent(obj.value),
+				obj.name+'='+value,
 				( typeof obj.expires != 'undefined' && obj.expires ? printExpires(obj.expires) : '' ),
 				( typeof obj.path != 'undefined' ? (obj.path ? 'Path='+obj.path : '') : 'Path=/' ),
 				( typeof obj.domain != 'undefined' && obj.domain ? 'Domain='+obj.domain : '' ),
@@ -48,7 +54,11 @@ var cookie = {
 
 		if( !obj.expires ) obj.expires = 0;
 		obj.name = n[0];
-		obj.value = decodeURIComponent(n[1]);
+		try{
+			obj.value = decodeURIComponent(n[1]);
+		}catch(e){
+			obj.value(n[1]);
+		}
 		return obj;
 	},
 	tokenize: function( array ){
