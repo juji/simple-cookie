@@ -1,6 +1,6 @@
 {
   "name": "simple-cookie",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simple cookie parser & serializer",
   "main": "index.js",
   "scripts": {
@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/juji/simple-cookie",
   "config": {
-      "blanket": {
-        "pattern": "index.js",
-        "data-cover-never" : "node_modules"
-      }
-    },
+    "blanket": {
+      "pattern": "index.js",
+      "data-cover-never": "node_modules"
+    }
+  },
   "devDependencies": {
     "chai": "^1.9.1",
     "chai-as-promised": "^4.1.1",
