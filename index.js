@@ -57,7 +57,7 @@ var cookie = {
 		try{
 			obj.value = decodeURIComponent(n[1]);
 		}catch(e){
-			obj.value(n[1]);
+			obj.value = n[1];
 		}
 		return obj;
 	},
