@@ -4,9 +4,8 @@
   "description": "Simple cookie parser & serializer",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
     "lint": "jshint *.json *.js",
-    "test-cov": "mocha --require blanket -R html-cov > test/coverage.html"
+    "test": "jshint *.json *.js && mocha"
   },
   "repository": {
     "type": "git",
