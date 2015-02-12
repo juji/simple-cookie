@@ -2,6 +2,7 @@
 simple cookie serializer & parser for node.js
 
 [![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
 
 ##install
 npm install simple-cookie
@@ -61,3 +62,6 @@ chhers,
 [jujiyangasli.com](http://jujiyangasli.com)
 [npm-image]: https://img.shields.io/npm/v/simple-cookie.svg?style=flat
 [npm-url]: https://npmjs.org/package/simple-cookie
+
+[travis-image]: https://img.shields.io/travis/juji/simple-cookie.svg?style=flat
+[travis-url]: https://travis-ci.org/juji/simple-cookie
