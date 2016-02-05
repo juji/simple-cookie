@@ -1,4 +1,5 @@
 node_modules/*
 simple-cookie.sublime-project
 simple-cookie.sublime-workspace
+npm_debug.log
 /test/coverage.html
