@@ -1,4 +1,4 @@
-#simple-cookie
+# simple-cookie
 simple cookie serializer & parser for node.js
 
 [![NPM Version][npm-image]][npm-url]
@@ -6,11 +6,12 @@ simple cookie serializer & parser for node.js
 [![devDependency Status](https://david-dm.org/juji/simple-cookie/dev-status.svg)](https://david-dm.org/juji/simple-cookie#info=devDependencies)
 [![Build Status][travis-image]][travis-url]
 
-##install
+## install
+```
 npm install simple-cookie
+```
 
-
-#usage
+# usage
 ```javascript
 var cookie = require('simple-cookie');
 
@@ -59,7 +60,7 @@ cookie.tokenize([
 ```
 
 
-chhers,
+cheers,
 
 [jujiyangasli.com](http://jujiyangasli.com)
 [npm-image]: https://img.shields.io/npm/v/simple-cookie.svg?style=flat
