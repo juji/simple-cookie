@@ -4,7 +4,6 @@ simple cookie serializer & parser for node.js
 [![NPM Version][npm-image]][npm-url]
 [![Dependency Status](https://david-dm.org/juji/simple-cookie.svg)](https://david-dm.org/juji/simple-cookie)
 [![devDependency Status](https://david-dm.org/juji/simple-cookie/dev-status.svg)](https://david-dm.org/juji/simple-cookie#info=devDependencies)
-[![Build Status][travis-image]][travis-url]
 
 ## install
 ```
@@ -66,5 +65,3 @@ cheers,
 [npm-image]: https://img.shields.io/npm/v/simple-cookie.svg?style=flat
 [npm-url]: https://npmjs.org/package/simple-cookie
 
-[travis-image]: https://img.shields.io/travis/juji/simple-cookie.svg?style=flat
-[travis-url]: https://travis-ci.org/juji/simple-cookie
