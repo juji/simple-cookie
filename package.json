@@ -1,12 +1,9 @@
 {
   "name": "simple-cookie",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple cookie parser & serializer",
   "main": "index.js",
   "scripts": {
-    "lint": "jshint *.json *.js",
-    "test": "jshint *.json *.js && mocha",
-    "test:coverage": "istanbul cover _mocha -- --check-leaks test/*.js"
   },
   "repository": {
     "type": "git",
@@ -24,14 +21,6 @@
   "homepage": "https://github.com/juji/simple-cookie",
   "devDependencies": {
     "chai": "^1.10.0",
-    "chai-as-promised": "^4.3.0",
-    "istanbul": "^0.4.2",
-    "jshint": "^2.9.4",
-    "mocha": "^1.21.5"
-  },
-  "dependencies": {
-    "chai": "^1.10.0",
-    "chai-as-promised": "^4.3.0",
     "mocha": "^1.21.5"
   }
 }
