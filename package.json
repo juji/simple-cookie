@@ -4,7 +4,10 @@
   "description": "Simple cookie parser & serializer",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "mocha",
+    "posttest": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,7 @@
   "homepage": "https://github.com/juji/simple-cookie",
   "devDependencies": {
     "chai": "^3.5.0",
+    "eslint": "^3.17.1",
     "mocha": "^3.2.0"
   }
 }
