@@ -53,11 +53,11 @@ var cookie = {
         }
 
         if( !obj.expires ) obj.expires = 0;
-        obj.name = n[0];
+        obj.name = n.shift();
         try{
-            obj.value = decodeURIComponent(n[1]);
+            obj.value = decodeURIComponent(n.join('='));
         }catch(e){
-            obj.value = n[1];
+            obj.value = n.join('=');
         }
         return obj;
     },
