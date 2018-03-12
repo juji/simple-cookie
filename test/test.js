@@ -56,6 +56,25 @@ describe('simple-cookie',function(){
         });		
     });
 
+    describe('#parseString2',function(){
+        it('should return the right object from cookie string',function(){
+
+            var theCookie = 'cnameSecure=cval1sec=9; expires='+date+
+                            '; domain=.example.com; path=/; secure';
+
+            var h = cookie.parse( theCookie, 'example.com', '/is/cool' );
+            h.name.should.equal( 'cnameSecure' );
+            h.value.should.equal( 'cval1sec=9' );
+            h.expires.should.be.a( 'date' );
+            h.expires.toGMTString().should.equal( date );
+            h.secure.should.equal( true );
+            h.httponly.should.equal( false );
+            h.path.should.equal( '/' );
+            h.domain.should.equal( '.example.com' );
+
+        });     
+    });
+
     describe('#tokeninze',function(){
         it('should return tokenized cookies ready to send', function(){
             var cc = [

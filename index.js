@@ -54,15 +54,19 @@ var cookie = {
 
         if( !obj.expires ) obj.expires = 0;
         obj.name = n.shift();
-        try{
-            obj.value = decodeURIComponent(n.join('='));
-        }catch(e){
-            obj.value = n.join('=');
-        }
+        n = n.map((s) => {
+            var f;
+            try{
+                f = decodeURIComponent(s)
+            }catch(e){ f = s }
+            return s
+        })
+        
+        obj.value = n.join('=');
         return obj;
     },
     tokenize: function( array ){
-        return array.map(function(s){ return s.name+'='+encodeURIComponent(s.value); }).join('; ');
+        return array.map(function(s){ return s.name+'='+s.value; }).join('; ');
     }
 };
 
