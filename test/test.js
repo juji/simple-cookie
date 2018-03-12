@@ -78,11 +78,11 @@ describe('simple-cookie',function(){
     describe('#tokeninze',function(){
         it('should return tokenized cookies ready to send', function(){
             var cc = [
-				{name:'cookiename1',value:'cookie name 1'},
-				{name:'cookiename2',value:'cookie name 2'},
-				{name:'cookiename3',value:'cookie name 3'},
-				{name:'cookiename4',value:'cookie name 4'},
-				{name:'cookiename5',value:'cookie name 5'}
+                {name:'cookiename1',value:'cookie name 1'},
+                {name:'cookiename2',value:'cookie name 2'},
+                {name:'cookiename3',value:'cookie name 3'},
+                {name:'cookiename4',value:'cookie name 4'},
+                {name:'cookiename5',value:'cookie name 5'}
             ];
 
             var h = cookie.tokenize(cc);
