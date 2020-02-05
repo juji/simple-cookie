@@ -41,7 +41,7 @@ describe('simple-cookie',function(){
         it('should return the right object from cookie string',function(){
 
             var theCookie = 'cnameSecure=cval1sec; expires='+date+
-							'; domain=.example.com; path=/; secure';
+							'; domain=.example.com; path=/; secure; samesite=None';
 
             var h = cookie.parse( theCookie, 'example.com', '/is/cool' );
             h.name.should.equal( 'cnameSecure' );
@@ -52,6 +52,7 @@ describe('simple-cookie',function(){
             h.httponly.should.equal( false );
             h.path.should.equal( '/' );
             h.domain.should.equal( '.example.com' );
+            h.samesite.should.equal( 'None' );
 
         });		
     });
@@ -60,7 +61,7 @@ describe('simple-cookie',function(){
         it('should return the right object from cookie string',function(){
 
             var theCookie = 'cnameSecure=cval1sec=9; expires='+date+
-                            '; domain=.example.com; path=/; secure';
+                            '; domain=.example.com; path=/; secure; samesite=None';
 
             var h = cookie.parse( theCookie, 'example.com', '/is/cool' );
             h.name.should.equal( 'cnameSecure' );
@@ -71,6 +72,7 @@ describe('simple-cookie',function(){
             h.httponly.should.equal( false );
             h.path.should.equal( '/' );
             h.domain.should.equal( '.example.com' );
+            h.samesite.should.equal( 'None' );
 
         });     
     });

@@ -21,7 +21,8 @@ var cookie = {
             ( typeof obj.path != 'undefined' ? (obj.path ? 'Path='+obj.path : '') : 'Path=/' ),
             ( typeof obj.domain != 'undefined' && obj.domain ? 'Domain='+obj.domain : '' ),
             ( typeof obj.secure != 'undefined' && obj.secure ? 'secure' : '' ),
-            ( typeof obj.httponly != 'undefined' && obj.httponly ? 'HttpOnly' : '' )
+            ( typeof obj.httponly != 'undefined' && obj.httponly ? 'HttpOnly' : '' ),
+            ( typeof obj.samesite != 'undefined' && obj.samesite ? 'SameSite=' + obj.samesite : '')
 
         ].join(';').replace(/;+/g,';').replace(/;$/,'').replace(/;/g,'; ');
     },
@@ -37,6 +38,7 @@ var cookie = {
         obj.secure = false;
         obj.path = path || '/';
         obj.domain = domain || '';
+        obj.samesite = '';
 
         var I, f = {
             httponly: function(){ obj.httponly = true; },
@@ -44,7 +46,8 @@ var cookie = {
             expires: function(v){ obj.expires = new Date(v); },
             'max-age': function(v){ if(obj.expires) return; obj.expires = new Date((new Date()).valueOf()+(v*1000)); },
             path: function(v){ obj.path = v; },
-            domain: function(v){ obj.domain = v; }
+            domain: function(v){ obj.domain = v; },
+            samesite: function(v) { obj.samesite = v; }
         };
 
         for(var i in s) {

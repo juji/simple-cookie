@@ -22,7 +22,8 @@ var cookieObject = {
 	path: '/',
 	domain: 'domain.com',
 	httponly: false,
-	secure: true
+	secure: true,
+	samesite: 'cookie samesite'
 }
 ```
 What is `cookieObject`:
@@ -41,10 +42,12 @@ What is `cookieObject`:
 
 **secure** `Boolean` (optional) : defaults to `false`
 
+**samesite** `String` : samesite
+
 ##methods
 ```javascript
 var cookieString = cookie.stringify( cookieObject );
-// cookieName=cookie%20value; Expires: Sat, 15-Aug-2015 17:41:05 GMT; Max-Age: 31449600; Path=/; domain=domain.com; secure
+// cookieName=cookie%20value; Expires: Sat, 15-Aug-2015 17:41:05 GMT; Max-Age: 31449600; Path=/; domain=domain.com; secure; samesite=None
 
 
 cookie.parse( cookieString  [, defaultPath]  [, defaultDomain]  );
