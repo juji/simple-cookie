@@ -7,6 +7,7 @@ declare module 'simple-cookie' {
     domain?: string // cookie domain
     httponly?: boolean // defaults to false
     secure?: boolean // defaults to false
+    samesite?: string // defaults to empty string
   }
 
   export function parse(str: string, defaultPath?: string, defaultDomain?: string): Cookie
