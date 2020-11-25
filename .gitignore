@@ -3,3 +3,5 @@ simple-cookie.sublime-project
 simple-cookie.sublime-workspace
 npm_debug.log
 /test/coverage.html
+yarn-error.log
+yarn.lock
