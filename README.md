@@ -32,7 +32,7 @@ What is `cookieObject`:
 
 **value** `String` : cookie value
 
-**expires** `DateString | Number | Date` (optional) : expire date (default type is Date), value will be use as a parameter in `new Date`. e.g. `new Date(yourDateString)`.
+**expires** `DateString | Number | Date` (optional) : expire date (default type is Date), value will be used as a parameter in `new Date`. e.g. `new Date(yourDateString)`.
 
 **path** `String` (optional) : cookie path, defaults to `/`
 
