@@ -32,11 +32,11 @@ What is `cookieObject`:
 
 **value** `String` : cookie value
 
-**expires** `DateString | Number | Date` (optional) : expire date (default type is Date)
+**expires** `DateString | Number | Date` (optional) : expire date (default type is Date), value will be use as a parameter in `new Date`. e.g. `new Date(yourDateString)`.
 
 **path** `String` (optional) : cookie path, defaults to `/`
 
-**domain** `String` (optional) : cookie domain 
+**domain** `String` (optional) : cookie domain
 
 **httponly** `Boolean` (optional) : defaults to `false`
 
@@ -59,7 +59,7 @@ cookie.tokenize([
 	{name:'cookie2', value: 'cvalue2'},
 	{name:'cookie3', value: 'cvalue3'}
 ]);
-// cookie1=cvalue1; cookie2=cvalue2; cookie3=cvalue3 
+// cookie1=cvalue1; cookie2=cvalue2; cookie3=cvalue3
 ```
 
 
