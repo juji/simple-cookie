@@ -18,7 +18,7 @@
     "cookie"
   ],
   "author": "juji <jujiyangasli@gmail.com> (http://jujiyangasli.com/)",
-  "license": "Apache2",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/juji/simple-cookie/issues"
   },
