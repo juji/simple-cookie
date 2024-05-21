@@ -36,6 +36,7 @@
  * 
  * checkout the [SameSite attribute](https://web.dev/articles/samesite-cookies-explained).
  * 
+ * @module
  */
 
 
@@ -54,7 +55,7 @@ function printExpires(expires: string|number|Date|boolean): string | false {
  * da CookieObject. 
  * @type CookieObject
  * */
-type CookieObject = {
+export type CookieObject = {
   name: string
   value: string
   expires?: string | number | Date | boolean
