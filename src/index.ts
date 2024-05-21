@@ -1,7 +1,9 @@
 /**
  * Simple cookie parser & serializer
  * 
+ * @example
  * ```ts
+ * 
  * import { stringify, parse, tokenize } from 'simple-cookie';
  * 
  * const cookieObject = {
