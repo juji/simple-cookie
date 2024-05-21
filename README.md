@@ -3,16 +3,13 @@ simple cookie serializer & parser for node.js
 
 [![NPM Version](https://img.shields.io/npm/v/simple-cookie.svg?style=flat)](https://npmjs.org/package/simple-cookie)
 
-## install
-```
-npm install simple-cookie
-```
-
 # usage
-```javascript
-var cookie = require('simple-cookie');
 
-var cookieObject = {
+```javascript
+import cookie from 'simple-cookie';
+// const cookie = require('simple-cookie');
+
+const cookieObject = {
 	name: 'cookieName',
 	value: 'cookie value',
 	expires: (new Date()).valueOf() + 500000,
@@ -39,11 +36,12 @@ What is `cookieObject`:
 
 **secure** `Boolean` (optional) : defaults to `false`
 
-**samesite** `String` : samesite
+**samesite** `String` : [SameSite attribute](https://web.dev/articles/samesite-cookies-explained)
 
 ## methods
+
 ```javascript
-var cookieString = cookie.stringify( cookieObject );
+const cookieString = cookie.stringify( cookieObject );
 // cookieName=cookie%20value; Expires: Sat, 15-Aug-2015 17:41:05 GMT; Max-Age: 31449600; Path=/; domain=domain.com; secure; samesite=None
 
 

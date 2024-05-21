@@ -28,7 +28,7 @@ const cookie = {
      * From a CookieObject, returns string. 
      * @param obj the CookieObject 
      * */
-  stringify: function( obj: CookieObject ): string{
+    stringify: function( obj: CookieObject ): string{
       let value;
       try{
           value = encodeURIComponent(obj.value);
@@ -48,13 +48,13 @@ const cookie = {
       ].join(';').replace(/;+/g,';').replace(/;$/,'').replace(/;/g,'; ');
   },
 
-  /** 
-   * From a string, returns CookieObject. 
-   * @param string the string
-   * @param path the path to use in CookieObject
-   * @param domain the domain to use in CookieObject
-   * */
-  parse: function( string: string, path: string, domain: string ):CookieObject{
+    /** 
+     * From a string, returns CookieObject. 
+     * @param string the string
+     * @param path the path to use in CookieObject
+     * @param domain the domain to use in CookieObject
+     * */
+    parse: function( string: string, path: string, domain: string ):CookieObject{
 
       const s = string.replace(/;\s+/g,';').split(';')
           .map((s: string) => s.replace(/\s+\s+/g,'=').split('='));
@@ -107,13 +107,13 @@ const cookie = {
       return obj;
   },
 
-  /** 
-   * Tokenize CookieObject. 
-   * @param array array of CookieObject
-   * */
-  tokenize: function( array: CookieObject[] ): string{
-      return array.map((s) => s.name+'='+s.value).join('; ');
-  }
+    /** 
+     * Tokenize CookieObject. 
+     * @param array array of CookieObject
+     * */
+    tokenize: function( array: CookieObject[] ): string{
+        return array.map((s) => s.name+'='+s.value).join('; ');
+    }
 };
 
 export default cookie
