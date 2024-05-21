@@ -12,7 +12,7 @@ function printExpires(expires) {
     (date.valueOf() - (/* @__PURE__ */ new Date()).valueOf()) / 1e3
   );
 }
-const cookie = {
+const simpleCookie = {
   /** 
    * From a CookieObject, returns string. 
    * @param obj the CookieObject 
@@ -115,4 +115,4 @@ const cookie = {
   }
 };
 
-module.exports = cookie;
+exports.simpleCookie = simpleCookie;

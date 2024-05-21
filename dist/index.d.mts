@@ -11,8 +11,11 @@ type CookieObject = {
 };
 /**
  * Cookie
+ * testing
+ *
+ * @module
  */
-declare const cookie: {
+declare const simpleCookie: {
     /**
      * From a CookieObject, returns string.
      * @param obj the CookieObject
@@ -35,4 +38,4 @@ declare const cookie: {
     tokenize: (array: CookieObject[]) => string;
 };
 
-export { cookie as default };
+export { simpleCookie };

@@ -6,8 +6,8 @@ simple cookie serializer & parser for node.js
 # usage
 
 ```javascript
-import cookie from 'simple-cookie';
-// const cookie = require('simple-cookie');
+import { simpleCookie } from 'simple-cookie';
+// const simpleCookie = require('simple-cookie');
 
 const cookieObject = {
 	name: 'cookieName',
@@ -41,15 +41,15 @@ What is `cookieObject`:
 ## methods
 
 ```javascript
-const cookieString = cookie.stringify( cookieObject );
+const cookieString = simpleCookie.stringify( cookieObject );
 // cookieName=cookie%20value; Expires: Sat, 15-Aug-2015 17:41:05 GMT; Max-Age: 31449600; Path=/; domain=domain.com; secure; samesite=None
 
 
-cookie.parse( cookieString  [, defaultPath]  [, defaultDomain]  );
+simpleCookie.parse( cookieString  [, defaultPath]  [, defaultDomain]  );
 // will create object like the 'cookieObject'
 
 
-cookie.tokenize([
+simpleCookie.tokenize([
 	{name:'cookie1', value: 'cvalue1'},
 	{name:'cookie2', value: 'cvalue2'},
 	{name:'cookie3', value: 'cvalue3'}

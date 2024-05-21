@@ -28,7 +28,7 @@ type CookieObject = {
  * 
  * @module
  */
-const cookie = {
+const simpleCookie = {
 
     /** 
      * From a CookieObject, returns string. 
@@ -126,5 +126,5 @@ const cookie = {
 };
 
 
-export default cookie
+export { simpleCookie }
 
