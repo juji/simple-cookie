@@ -41,7 +41,7 @@ What is `cookieObject`:
 
 **samesite** `String` : samesite
 
-##methods
+## methods
 ```javascript
 var cookieString = cookie.stringify( cookieObject );
 // cookieName=cookie%20value; Expires: Sat, 15-Aug-2015 17:41:05 GMT; Max-Age: 31449600; Path=/; domain=domain.com; secure; samesite=None
