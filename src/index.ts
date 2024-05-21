@@ -24,7 +24,10 @@ type CookieObject = {
 
 const cookie = {
 
-    /** From a CookieObject, returns string. */
+    /** 
+     * From a CookieObject, returns string. 
+     * @param obj the CookieObject 
+     * */
   stringify: function( obj: CookieObject ): string{
       let value;
       try{
@@ -45,7 +48,12 @@ const cookie = {
       ].join(';').replace(/;+/g,';').replace(/;$/,'').replace(/;/g,'; ');
   },
 
-  /** From a string, returns CookieObject. */
+  /** 
+   * From a string, returns CookieObject. 
+   * @param string the string
+   * @param path the path to use in CookieObject
+   * @param domain the domain to use in CookieObject
+   * */
   parse: function( string: string, path: string, domain: string ):CookieObject{
 
       const s = string.replace(/;\s+/g,';').split(';')
@@ -99,7 +107,10 @@ const cookie = {
       return obj;
   },
 
-  /** Tokenize CookieObject. */
+  /** 
+   * Tokenize CookieObject. 
+   * @param array array of CookieObject
+   * */
   tokenize: function( array: CookieObject[] ): string{
       return array.map((s) => s.name+'='+s.value).join('; ');
   }
