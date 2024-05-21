@@ -20,7 +20,7 @@ type CookieObject = {
 }
 
 const cookie = {
-  stringify: function( obj: CookieObject ){
+  stringify: function( obj: CookieObject ): string{
       let value;
       try{
           value = encodeURIComponent(obj.value);
@@ -39,12 +39,13 @@ const cookie = {
 
       ].join(';').replace(/;+/g,';').replace(/;$/,'').replace(/;/g,'; ');
   },
-  parse: function( string, path, domain ){
+  parse: function( string: string, path: string, domain: string ):CookieObject{
 
       const s = string.replace(/;\s+/g,';').split(';')
-          .map((s) => s.replace(/\s+\s+/g,'=').split('='));
+          .map((s: string) => s.replace(/\s+\s+/g,'=').split('='));
 
       let n = s.shift();
+      if(!n) throw new Error('malformed cookie')
 
       const obj: CookieObject = {
           name: '',
@@ -77,7 +78,8 @@ const cookie = {
       }
 
       if( !obj.expires ) obj.expires = 0;
-      obj.name = n.shift();
+      obj.name = n.shift() || '';
+      if(!obj.name) throw new Error('cookie name is empty')
       n = n.map((s: string) => {
           let fi: string;
           try{
@@ -89,7 +91,7 @@ const cookie = {
       obj.value = n.join('=');
       return obj;
   },
-  tokenize: function( array: CookieObject[] ){
+  tokenize: function( array: CookieObject[] ): string{
       return array.map((s) => s.name+'='+s.value).join('; ');
   }
 };
