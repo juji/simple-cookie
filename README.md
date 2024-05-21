@@ -36,7 +36,7 @@ What is `cookieObject`:
 
 **secure** `Boolean` (optional) : defaults to `false`
 
-**samesite** `String` : [SameSite attribute](https://web.dev/articles/samesite-cookies-explained)
+**samesite** `String` (optional) : [SameSite attribute](https://web.dev/articles/samesite-cookies-explained)
 
 ## methods
 
