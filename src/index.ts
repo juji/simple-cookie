@@ -59,7 +59,7 @@ const cookie = {
      * @param domain the domain to use in CookieObject
      * @returns CookieObject
      * */
-    parse: function( string: string, path: string, domain: string ):CookieObject{
+    parse: function( string: string, path?: string, domain?: string ):CookieObject{
 
       const s = string.replace(/;\s+/g,';').split(';')
           .map((s: string) => s.replace(/\s+\s+/g,'=').split('='));
@@ -122,5 +122,9 @@ const cookie = {
     }
 };
 
+
+/**
+ * Cookie
+ */
 export default cookie
 
