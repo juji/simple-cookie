@@ -22,11 +22,15 @@ type CookieObject = {
   samesite?: String
 }
 
+/**
+ * Cookie
+ */
 const cookie = {
 
     /** 
      * From a CookieObject, returns string. 
      * @param obj the CookieObject 
+     * @returns a cookie string
      * */
     stringify: function( obj: CookieObject ): string{
       let value;
@@ -53,6 +57,7 @@ const cookie = {
      * @param string the string
      * @param path the path to use in CookieObject
      * @param domain the domain to use in CookieObject
+     * @returns CookieObject
      * */
     parse: function( string: string, path: string, domain: string ):CookieObject{
 
@@ -110,6 +115,7 @@ const cookie = {
     /** 
      * Tokenize CookieObject. 
      * @param array array of CookieObject
+     * @returns Tokenized cookies
      * */
     tokenize: function( array: CookieObject[] ): string{
         return array.map((s) => s.name+'='+s.value).join('; ');
