@@ -1,33 +1,45 @@
 {
   "name": "@juji/simple-cookie",
   "version": "1.0.17",
-  "description": "Simple cookie parser & serializer",
-  "type": "module",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "test": "mocha",
-    "posttest": "npm run lint"
-  },
+  "author": "juji <jujiyangasli@gmail.com> (http://jujiyangasli.com/)",
   "repository": {
     "type": "git",
     "url": "git@github.com:juji/simple-cookie.git"
   },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+    },
+    "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/juji/simple-cookie/issues"
+  },
+  "description": "Simple cookie parser & serializer",
+  "homepage": "https://github.com/juji/simple-cookie",
   "keywords": [
     "node.js",
     "cookie"
   ],
-  "author": "juji <jujiyangasli@gmail.com> (http://jujiyangasli.com/)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/juji/simple-cookie/issues"
+  "scripts": {
+    "test": "mocha --import=tsx test/**/*.ts",
+    "build": "pkgroll --target=es2020"
   },
-  "homepage": "https://github.com/juji/simple-cookie",
   "devDependencies": {
-    "chai": "^4.2.0",
-    "eslint": "^6.8.0",
-    "mocha": "^7.1.1"
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.6",
+    "chai": "^5.1.1",
+    "mocha": "^10.4.0",
+    "pkgroll": "^2.1.0",
+    "tsx": "^4.10.5"
   }
 }
