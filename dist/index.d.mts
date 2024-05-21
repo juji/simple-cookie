@@ -1,3 +1,4 @@
+/** da CookieObject. */
 type CookieObject = {
     name: string;
     value: string;
@@ -8,9 +9,29 @@ type CookieObject = {
     secure?: boolean;
     samesite?: String;
 };
+/**
+ * Cookie
+ */
 declare const cookie: {
+    /**
+     * From a CookieObject, returns string.
+     * @param obj the CookieObject
+     * @returns a cookie string
+     * */
     stringify: (obj: CookieObject) => string;
-    parse: (string: any, path: any, domain: any) => CookieObject;
+    /**
+     * From a string, returns CookieObject.
+     * @param string the string
+     * @param path the path to use in CookieObject
+     * @param domain the domain to use in CookieObject
+     * @returns CookieObject
+     * */
+    parse: (string: string, path?: string, domain?: string) => CookieObject;
+    /**
+     * Tokenize CookieObject.
+     * @param array array of CookieObject
+     * @returns Tokenized cookies
+     * */
     tokenize: (array: CookieObject[]) => string;
 };
 

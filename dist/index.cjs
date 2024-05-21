@@ -13,6 +13,11 @@ function printExpires(expires) {
   );
 }
 const cookie = {
+  /** 
+   * From a CookieObject, returns string. 
+   * @param obj the CookieObject 
+   * @returns a cookie string
+   * */
   stringify: function(obj) {
     let value;
     try {
@@ -30,9 +35,18 @@ const cookie = {
       typeof obj.samesite !== "undefined" && obj.samesite ? "SameSite=" + obj.samesite : ""
     ].join(";").replace(/;+/g, ";").replace(/;$/, "").replace(/;/g, "; ");
   },
+  /** 
+   * From a string, returns CookieObject. 
+   * @param string the string
+   * @param path the path to use in CookieObject
+   * @param domain the domain to use in CookieObject
+   * @returns CookieObject
+   * */
   parse: function(string, path, domain) {
     const s = string.replace(/;\s+/g, ";").split(";").map((s2) => s2.replace(/\s+\s+/g, "=").split("="));
     let n = s.shift();
+    if (!n)
+      throw new Error("malformed cookie");
     const obj = {
       name: "",
       value: "",
@@ -76,7 +90,9 @@ const cookie = {
     }
     if (!obj.expires)
       obj.expires = 0;
-    obj.name = n.shift();
+    obj.name = n.shift() || "";
+    if (!obj.name)
+      throw new Error("cookie name is empty");
     n = n.map((s2) => {
       let fi;
       try {
@@ -89,6 +105,11 @@ const cookie = {
     obj.value = n.join("=");
     return obj;
   },
+  /** 
+   * Tokenize CookieObject. 
+   * @param array array of CookieObject
+   * @returns Tokenized cookies
+   * */
   tokenize: function(array) {
     return array.map((s) => s.name + "=" + s.value).join("; ");
   }
