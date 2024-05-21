@@ -1,7 +1,7 @@
 /**
  * Simple cookie parser & serializer
  * 
- * @example
+ * @example Usage
  * ```ts
  * 
  * import { stringify, parse, tokenize } from 'simple-cookie';
@@ -14,7 +14,7 @@
  *	domain: 'domain.com',
  *	httponly: false,
  *	secure: true,
- *	samesite: 'cookie samesite'
+ *	samesite: 'None'
  * }
  * 
  * const cookie: string = stringify( cookieObject );
@@ -34,7 +34,8 @@
  * 
  * ```
  * 
- * @module
+ * checkout the [SameSite attribute](https://web.dev/articles/samesite-cookies-explained).
+ * 
  */
 
 
