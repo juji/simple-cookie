@@ -24,6 +24,9 @@ type CookieObject = {
 
 /**
  * Cookie
+ * testing 
+ * 
+ * @module
  */
 const cookie = {
 
@@ -123,8 +126,5 @@ const cookie = {
 };
 
 
-/**
- * Cookie
- */
 export default cookie
 

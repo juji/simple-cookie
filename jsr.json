@@ -1,5 +1,5 @@
 {
   "name": "@juji/simple-cookie",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "exports": "./src/index.ts"
 }
