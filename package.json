@@ -2,7 +2,9 @@
   "name": "@juji/simple-cookie",
   "version": "1.0.15",
   "description": "Simple cookie parser & serializer",
+  "type": "module",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",

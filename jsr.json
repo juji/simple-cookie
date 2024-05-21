@@ -1,0 +1,5 @@
+{
+  "name": "@juji/simple-cookie",
+  "version": "1.0.15",
+  "exports": "./index.js"
+}
