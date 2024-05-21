@@ -1,3 +1,5 @@
+
+/** This function returns Expiry date in the format of Expires=;Max-Age=. */
 function printExpires(expires: string|number|Date|boolean){
   if(!expires) return false;
   let date = new Date();
@@ -8,6 +10,7 @@ function printExpires(expires: string|number|Date|boolean){
   );
 }
 
+/** da CookieObject. */
 type CookieObject = {
   name: string
   value: string
@@ -20,6 +23,8 @@ type CookieObject = {
 }
 
 const cookie = {
+
+    /** From a CookieObject, returns string. */
   stringify: function( obj: CookieObject ): string{
       let value;
       try{
@@ -39,6 +44,8 @@ const cookie = {
 
       ].join(';').replace(/;+/g,';').replace(/;$/,'').replace(/;/g,'; ');
   },
+
+  /** From a string, returns CookieObject. */
   parse: function( string: string, path: string, domain: string ):CookieObject{
 
       const s = string.replace(/;\s+/g,';').split(';')
@@ -91,6 +98,8 @@ const cookie = {
       obj.value = n.join('=');
       return obj;
   },
+
+  /** Tokenize CookieObject. */
   tokenize: function( array: CookieObject[] ): string{
       return array.map((s) => s.name+'='+s.value).join('; ');
   }
