@@ -43,15 +43,15 @@ What is `cookieObject`:
 ```javascript
 // import { stringify, parse, tokenize } from 'simple-cookie';
 
-const cookieString = stringify( cookieObject );
+const cookie: string = stringify( cookieObject );
 // cookieName=cookie%20value; Expires: Sat, 15-Aug-2015 17:41:05 GMT; Max-Age: 31449600; Path=/; domain=domain.com; secure; samesite=None
 
 
-parse( cookieString  [, defaultPath]  [, defaultDomain]  );
+const cookieObject: CookieObject = parse( cookieString  [, defaultPath]  [, defaultDomain]  );
 // will create object like the 'cookieObject'
 
 
-tokenize([
+const tokens: string = tokenize([
 	{name:'cookie1', value: 'cvalue1'},
 	{name:'cookie2', value: 'cvalue2'},
 	{name:'cookie3', value: 'cvalue3'}

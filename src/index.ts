@@ -1,3 +1,10 @@
+/**
+ * Cookie
+ * testing 
+ * 
+ * @module simpleCookie
+ */
+
 
 /** This function returns Expiry date in the format of Expires=;Max-Age=. */
 function printExpires(expires: string|number|Date|boolean){
@@ -24,13 +31,6 @@ type CookieObject = {
   secure?: boolean
   samesite?: String
 }
-
-/**
- * Cookie
- * testing 
- * 
- * @module
- */
 
 
 /** 
