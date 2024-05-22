@@ -6,8 +6,8 @@ simple cookie serializer & parser for node.js
 # usage
 
 ```ts
-import { stringify, parse, tokenize } from 'simple-cookie';
-// const { stringify, parse, tokenize } = require('simple-cookie');
+import { stringify, parse, tokenize } from '@juji/simple-cookie';
+// const { stringify, parse, tokenize } = require('@juji/simple-cookie');
 
 const cookieObject = {
 	name: 'cookieName',
@@ -44,7 +44,7 @@ What is `cookieObject`:
 import { 
   type CookieObject,
   stringify, parse, tokenize 
-} from 'simple-cookie';
+} from '@juji/simple-cookie';
 
 const cookie: string = stringify( cookieObject );
 // cookieName=cookie%20value; Expires: Sat, 15-Aug-2015 17:41:05 GMT; Max-Age: 31449600; Path=/; domain=domain.com; secure; samesite=None

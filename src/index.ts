@@ -7,7 +7,7 @@
  * import { 
  *  type CookieObject,
  *  stringify, parse, tokenize 
- * } from 'simple-cookie';
+ * } from '@juji/simple-cookie';
  * 
  * const cookieObject = {
  *	name: 'cookieName',
