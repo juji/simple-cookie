@@ -10,14 +10,14 @@ import { stringify, parse, tokenize } from '@juji/simple-cookie';
 // const { stringify, parse, tokenize } = require('@juji/simple-cookie');
 
 const cookieObject = {
-	name: 'cookieName',
-	value: 'cookie value',
-	expires: (new Date()).valueOf() + 500000,
-	path: '/',
-	domain: 'domain.com',
-	httponly: false,
-	secure: true,
-	samesite: 'None'
+  name: 'cookieName',
+  value: 'cookie value',
+  expires: (new Date()).valueOf() + 500000,
+  path: '/',
+  domain: 'domain.com',
+  httponly: false,
+  secure: true,
+  samesite: 'None'
 }
 ```
 What is `cookieObject`:
