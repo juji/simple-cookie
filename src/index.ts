@@ -68,8 +68,7 @@ export type CookieObject = {
 
 /** 
  * From a CookieObject, returns string. 
- * @param obj the {@linkcode CookieObject}
- * @returns a cookie string
+ * @param obj the CookieObject
  * */
 export function stringify( obj: CookieObject ): string{
     let value;
@@ -92,10 +91,10 @@ export function stringify( obj: CookieObject ): string{
 }
 
 /** 
- * From a string, returns {@linkcode CookieObject}. 
+ * From a string, returns CookieObject. 
  * @param string the string
- * @param path the path to use in {@linkcode CookieObject}
- * @param domain the domain to use in {@linkcode CookieObject}
+ * @param path the path to use in CookieObject
+ * @param domain the domain to use in CookieObject
  * @returns {@linkcode CookieObject}
  * */
 export function parse( string: string, path?: string, domain?: string ):CookieObject{
@@ -152,8 +151,8 @@ export function parse( string: string, path?: string, domain?: string ):CookieOb
 }
 
 /** 
- * Tokenize {@linkcode CookieObject}s. 
- * @param array array of {@linkcode CookieObject}s
+ * Tokenize CookieObjects. 
+ * @param array array of CookieObjects
  * @returns Tokenized cookies
  * */
 export function tokenize( array: CookieObject[] ): string{
