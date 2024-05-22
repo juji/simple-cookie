@@ -4,7 +4,10 @@
  * @example Usage
  * ```ts
  * 
- * import { stringify, parse, tokenize } from 'simple-cookie';
+ * import { 
+ *  type CookieObject,
+ *  stringify, parse, tokenize 
+ * } from 'simple-cookie';
  * 
  * const cookieObject = {
  *	name: 'cookieName',

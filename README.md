@@ -17,7 +17,7 @@ const cookieObject = {
 	domain: 'domain.com',
 	httponly: false,
 	secure: true,
-	samesite: 'cookie samesite'
+	samesite: 'None'
 }
 ```
 What is `cookieObject`:
@@ -41,7 +41,10 @@ What is `cookieObject`:
 ## methods
 
 ```ts
-// import { stringify, parse, tokenize } from 'simple-cookie';
+import { 
+  type CookieObject,
+  stringify, parse, tokenize 
+} from 'simple-cookie';
 
 const cookie: string = stringify( cookieObject );
 // cookieName=cookie%20value; Expires: Sat, 15-Aug-2015 17:41:05 GMT; Max-Age: 31449600; Path=/; domain=domain.com; secure; samesite=None
