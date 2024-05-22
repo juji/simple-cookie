@@ -41,10 +41,8 @@ What is `cookieObject`:
 ## methods
 
 ```ts
-import { 
-  type CookieObject,
-  stringify, parse, tokenize 
-} from '@juji/simple-cookie';
+import { type CookieObject } from "@juji/simple-cookie/dist/index.mjs";
+import { stringify, parse, tokenize } from '@juji/simple-cookie';
 
 const cookie: string = stringify( cookieObject );
 // cookieName=cookie%20value; Expires: Sat, 15-Aug-2015 17:41:05 GMT; Max-Age: 31449600; Path=/; domain=domain.com; secure; samesite=None
