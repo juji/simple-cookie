@@ -5,7 +5,7 @@ simple cookie serializer & parser for node.js
 
 # usage
 
-```javascript
+```ts
 import { stringify, parse, tokenize } from 'simple-cookie';
 // const { stringify, parse, tokenize } = require('simple-cookie');
 
@@ -40,7 +40,7 @@ What is `cookieObject`:
 
 ## methods
 
-```javascript
+```ts
 // import { stringify, parse, tokenize } from 'simple-cookie';
 
 const cookie: string = stringify( cookieObject );
