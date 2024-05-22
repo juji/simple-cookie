@@ -52,8 +52,7 @@ function printExpires(expires: string|number|Date|boolean): string | false {
 }
 
 /** 
- * da CookieObject. 
- * @type CookieObject
+ * The CookieObject. 
  * */
 export type CookieObject = {
   name: string
@@ -69,7 +68,7 @@ export type CookieObject = {
 
 /** 
  * From a CookieObject, returns string. 
- * @param obj the CookieObject 
+ * @param obj the {@linkcode CookieObject}
  * @returns a cookie string
  * */
 export function stringify( obj: CookieObject ): string{
@@ -93,11 +92,11 @@ export function stringify( obj: CookieObject ): string{
 }
 
 /** 
- * From a string, returns CookieObject. 
+ * From a string, returns {@linkcode CookieObject}. 
  * @param string the string
- * @param path the path to use in CookieObject
- * @param domain the domain to use in CookieObject
- * @returns CookieObject
+ * @param path the path to use in {@linkcode CookieObject}
+ * @param domain the domain to use in {@linkcode CookieObject}
+ * @returns {@linkcode CookieObject}
  * */
 export function parse( string: string, path?: string, domain?: string ):CookieObject{
 
@@ -153,8 +152,8 @@ export function parse( string: string, path?: string, domain?: string ):CookieOb
 }
 
 /** 
- * Tokenize CookieObject. 
- * @param array array of CookieObject
+ * Tokenize {@linkcode CookieObject}s. 
+ * @param array array of {@linkcode CookieObject}s
  * @returns Tokenized cookies
  * */
 export function tokenize( array: CookieObject[] ): string{
